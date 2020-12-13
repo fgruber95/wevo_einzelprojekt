@@ -1,0 +1,266 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #CCC;
+}
+
+nav img#logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}
+
+nav ul li{
+    list-style-type: none;
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #585858;
+}
+
+a.selectedPage{
+    font-weight: bold;
+    color: #a90606;
+}
+
+section#content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+section#content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#content ul li {
+    list-style-type: none;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+button.icon {
+    background: none;
+    border: none;
+    padding: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #CCC;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 640px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.col {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.colbtn {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.firstRow {
+    position: absolute;
+    left: 241px;
+    top: -3px;
+    border: 2px #808080 solid;
+    width: 250px;
+    padding-left: 5px;
+}
+
+.secondRow {
+    position: absolute;
+    left: 540px;
+    top: -3px;
+    border: 2px #808080 solid;
+    width: 250px;
+    padding-left: 5px;
+}
+
+.agb {
+    position: absolute;
+    left: 240px;
+    top: 9px;
+}
+
+.agbcaption {
+    position: absolute;
+    left: 272px;
+    top: 10px;
+    height: 50px;
+    width: 550px;
+}
+
+.plz {
+    position: absolute;
+    left: 540px;
+    top: -3px;
+    border: 2px #808080 solid;
+    width: 75px;
+    padding-left: 5px;
+}
+
+.town {
+    position: absolute;
+    left: 620px;
+    top: -3px;
+    border: 2px #808080 solid;
+    width: 170px;
+    padding-left: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    left: 241px;
+    top: -3px;
+    width: 250px;
+    border: 2px #808080 solid;
+}
+
+.btn {
+    position: relative;
+    left: 241px;
+    top: -3px;
+    padding-left: 5px;
+}

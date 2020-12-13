@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>WEVO Einzelprojekt Franz Gruber</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body onload="app.initProfile();">
+    <header>
+        <nav>
+            <img src="assets/images/logo.png" alt="logo" id="logo" />
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="profile.html" class="selectedPage">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h2>Profile</h2>
+
+        <div class="col-3 col-s-12"></div>
+
+        <div id="form" class="col-6 col-s-12">
+            <form name="formular" id="form">
+                <div class="col">
+                    <label for="country">Land des Wohnsitzes</label>
+                    <select name="country" size="1" id="countries" class="dropdown">
+                        <option>Land ausw&auml;hlen</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="date">Geburtsdatum</label>
+                    <input type="text" name="bday" placeholder="TT.MM.JJJJ" class="firstRow" />
+                </div>
+                <div class="col">
+                    <label for="title">Titel</label>
+                    <select name="title" class="dropdown">
+                        <option>Titel ausw&auml;hlen</option>
+                        <option>Herr</option>
+                        <option>Frau</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="Vorname" class="firstRow" />
+                    <input type="text" name="surname" placeholder="Nachname" class="secondRow" />
+                </div>
+                <div class="col">
+                    <label for="address">Adresse</label>
+                    <input type="text" name="street" placeholder="Stra&szlig;e" class="firstRow" />
+                    <input type="text" name="plz" placeholder="PLZ" class="plz" />
+                    <input type="text" name="town" placeholder="Ort" class="town" />
+                </div>
+                <div class="col">
+                    <label for="email">E-Mail-Adresse</label>
+                    <input type="text" name="email" placeholder="E-Mail-Adresse eingeben" class="firstRow" />
+                    <input type="text" name="verifyemail" placeholder="E-Mail-Adresse wiederholen" class="secondRow" />
+                </div>
+                <div class="col">
+                    <label for="password">Passwort</label>
+                    <input type="password" name="password" placeholder="Passwort" class="firstRow" />
+                    <input type="password" name="verifypassword" placeholder="Passwort wiederholen" class="secondRow" />
+                </div>
+                <div class="col">
+                    <label for="date">Geheime Frage &amp; Antwort</label>
+                    <select name="question" class="dropdown">
+                        <option>Frage ausw&auml;hlen</option>
+                        <option>Name meiner Grundschule?</option>
+                        <option>Geburtsort meiner Mutter?</option>
+                        <option>Geburtsort des Vaters?</option>
+                        <option>Name meines ersten Haustieres?</option>
+                        <option>Mein erstes Auto?</option>
+                        <option>Bester Freund aus meiner Schulzeit?</option>
+                    </select>
+                    <input type="text" name="answer" placeholder="Antwort" class="secondRow" />
+                </div>
+                <div class="col">
+                    <input type="checkbox" name="agb" class="agb" />
+                    <label for="agb" class="agbcaption">
+                        Ich habe die f&uuml;r mein Land geltenden <a>Nutzungsbestimmungen</a> gelesen und stimme ihnen zu.
+                    </label>
+                </div>
+                <div class="colbtn">
+                    <input type="button" onclick="app.checkForm()" name="submit" value="Daten speichern" class="btn" />
+                </div>
+            </form>
+        </div>
+
+        <div class="col-3 col-s-12"></div>
+    </section>
+
+    <footer>
+        <span>&copy; 2020 WEVO - Franz Gruber</span>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

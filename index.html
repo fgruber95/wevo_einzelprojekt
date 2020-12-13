@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>WEVO Einzelprojekt Franz Gruber</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body onload="app.initDashboard();">
+    <header>
+        <nav>
+            <img src="assets/images/logo.png" alt="logo" id="logo" />
+            <ul>
+                <li><a href="index.html" class="selectedPage">Dashboard</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h2>Dashboard</h2>
+
+        <div class="col-4 col-s-6">
+            <h3>Coins</h3>
+            <input type="text" id="coinsSearch" onkeyup="app.searchCoinsList()" placeholder="Search for a coin...">
+            <ul id="coinsList"></ul>
+        </div>
+
+        <div class="col-4 col-s-6">
+            <h3>Wallet Overview</h3>
+            <ul id="walletList"></ul>
+        </div>
+
+        <div class="col-4 col-s-12">
+            <h3>History</h3>
+            <div id="history"></div>
+        </div>
+    </section>
+
+    <footer>
+        <span>&copy; 2020 WEVO - Franz Gruber</span>
+    </footer>
+    <script src="js/coinClass.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
-<body>
+<body onload="app.initMarketcaps();">
     <header>
         <nav>
             <img src="assets/images/logo.png" alt="logo" id="logo" />
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="prices.html" class="selectedPage">Prices</a></li>
+                <li><a href="marketcaps.html" class="selectedPage">Marketcaps</a></li>
                 <li><a href="profile.html">Profile</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="content">
+        <h2>Marketcaps</h2>
+
+        <div class="col-3 col-s-12"></div>
+
+        <div id="piechart" class="col-6 col-s-12"></div>
+
+        <div class="col-3 col-s-12"></div>
     </section>
 
     <footer>
         <span>&copy; 2020 WEVO - Franz Gruber</span>
     </footer>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

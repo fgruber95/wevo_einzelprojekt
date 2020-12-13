@@ -3,6 +3,7 @@ var app = (function () {
 
     const baseUrlCoingecko = 'https://api.coingecko.com/api/v3/';
 	const urlCoinList = baseUrlCoingecko + 'coins/list';
+	const urlGlobal = baseUrlCoingecko + "global";
 
 	const baseUrlFirstOrg = "https://api.first.org/data/v1/";
 	const urlCountries = baseUrlFirstOrg + "countries";
@@ -332,15 +333,67 @@ var app = (function () {
 		}
 	}
 
+	let initMarketcaps = function () {
+		requestMarketcaps();
+	}
+
+	let requestMarketcaps = function () {
+		console.log('Get Marketcap Data');
+		fetch(urlGlobal, { mode: 'cors' })
+			.then(function (response) {
+				if (response.status !== 200) {
+					console.log("Error: " + response.status);
+					return;
+				}
+				return response.json();
+			})
+			.then(function (response) {
+				console.log('Get Marketcap Data Request successful');
+				renderRequestedDataForPrices(response);
+			})
+			.catch(function (error) {
+				console.log('Get Marketcap Data Request failed', error)
+			});
+	}
+
+
+	let renderRequestedDataForPrices = function (data) {
+
+		var totalMarketCapsKeys = Object.keys(data.data.market_cap_percentage);
+		var totalMarketCapsValues = Object.values(data.data.market_cap_percentage);
+		let totalMarketCapsArray = [];
+
+		totalMarketCapsArray.push(["Coin", "Marketcap"]);
+
+		totalMarketCapsValues.forEach((marketcap, index) => {
+			let rowArray = [totalMarketCapsKeys[index].toUpperCase(), totalMarketCapsValues[index]];
+			totalMarketCapsArray.push(rowArray);
+		});
+
+		google.charts.load('current', { 'packages': ['corechart'] });
+		google.charts.setOnLoadCallback(function () { drawChart(totalMarketCapsArray) });
+	}
+
+	let drawChart = function (totalMarketCapsArray) {
+		var data = google.visualization.arrayToDataTable(totalMarketCapsArray);
+
+		// Optional; add a title and set the width and height of the chart
+		var options = { 'title': 'Market Cap Percentage', 'width': 550, 'height': 400 };
+
+		// Display the chart inside the <div> element with id="piechart"
+		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+		chart.draw(data, options);
+	}
+
 
     //public functions and variables
     return {
         initDashboard: initDashboard,
-		requestCoins: requestCoins,
         searchCoinsList: searchCoinsList,
         addCoinToWalletList: addCoinToWalletList,
 		removeCoinFromWalletList: removeCoinFromWalletList,
 		initProfile: initProfile,
 		checkForm: checkForm,
+		initMarketcaps: initMarketcaps,
     }
 }());

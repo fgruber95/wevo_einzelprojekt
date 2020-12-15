@@ -78,6 +78,10 @@ footer {
     align-items: center;
 }
 
+footer span{
+    padding-right: 10px;
+}
+
 
 /* For mobile phones: */
 [class*="col-"] {

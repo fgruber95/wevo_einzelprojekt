@@ -1,6 +1,6 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 
-<html>
+<html lang="de-at">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>WEVO Einzelprojekt Franz Gruber</title>
@@ -10,7 +10,7 @@
 <body onload="app.initProfile();">
     <header>
         <nav>
-            <img src="assets/images/logo.png" alt="logo" id="logo" />
+            <a href="index.html"><img src="assets/images/logo.png" alt="logo" id="logo" /></a>
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="marketcaps.html">Marketcaps</a></li>
@@ -22,23 +22,23 @@
     <section id="content">
         <h2>Profile</h2>
 
-        <div class="col-3 col-s-12"></div>
+        <div class="col-1 col-s-1"></div>
 
-        <div id="form" class="col-6 col-s-12">
+        <div class="col-11 col-s-11">
             <form name="formular" id="form">
                 <div class="col">
-                    <label for="country">Land des Wohnsitzes</label>
+                    <label for="countries">Land des Wohnsitzes</label>
                     <select name="country" size="1" id="countries" class="dropdown">
                         <option>Land ausw&auml;hlen</option>
                     </select>
                 </div>
                 <div class="col">
-                    <label for="date">Geburtsdatum</label>
-                    <input type="text" name="bday" placeholder="TT.MM.JJJJ" class="firstRow" />
+                    <label for="bday">Geburtsdatum</label>
+                    <input type="text" name="bday" id="bday" placeholder="TT.MM.JJJJ" class="firstRow" />
                 </div>
                 <div class="col">
                     <label for="title">Titel</label>
-                    <select name="title" class="dropdown">
+                    <select name="title" id="title" class="dropdown">
                         <option>Titel ausw&auml;hlen</option>
                         <option>Herr</option>
                         <option>Frau</option>
@@ -46,28 +46,28 @@
                 </div>
                 <div class="col">
                     <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="Vorname" class="firstRow" />
+                    <input type="text" name="name" id="name" placeholder="Vorname" class="firstRow" />
                     <input type="text" name="surname" placeholder="Nachname" class="secondRow" />
                 </div>
                 <div class="col">
                     <label for="address">Adresse</label>
-                    <input type="text" name="street" placeholder="Stra&szlig;e" class="firstRow" />
+                    <input type="text" name="street" id="address" placeholder="Stra&szlig;e" class="firstRow" />
                     <input type="text" name="plz" placeholder="PLZ" class="plz" />
                     <input type="text" name="town" placeholder="Ort" class="town" />
                 </div>
                 <div class="col">
                     <label for="email">E-Mail-Adresse</label>
-                    <input type="text" name="email" placeholder="E-Mail-Adresse eingeben" class="firstRow" />
+                    <input type="text" name="email" id="email" placeholder="E-Mail-Adresse eingeben" class="firstRow" />
                     <input type="text" name="verifyemail" placeholder="E-Mail-Adresse wiederholen" class="secondRow" />
                 </div>
                 <div class="col">
                     <label for="password">Passwort</label>
-                    <input type="password" name="password" placeholder="Passwort" class="firstRow" />
+                    <input type="password" name="password" id="password" placeholder="Passwort" class="firstRow" />
                     <input type="password" name="verifypassword" placeholder="Passwort wiederholen" class="secondRow" />
                 </div>
                 <div class="col">
-                    <label for="date">Geheime Frage &amp; Antwort</label>
-                    <select name="question" class="dropdown">
+                    <label for="question">Geheime Frage &amp; Antwort</label>
+                    <select name="question" id="question" class="dropdown">
                         <option>Frage ausw&auml;hlen</option>
                         <option>Name meiner Grundschule?</option>
                         <option>Geburtsort meiner Mutter?</option>
@@ -79,7 +79,7 @@
                     <input type="text" name="answer" placeholder="Antwort" class="secondRow" />
                 </div>
                 <div class="col">
-                    <input type="checkbox" name="agb" class="agb" />
+                    <input type="checkbox" name="agb" id="agb" class="agb" />
                     <label for="agb" class="agbcaption">
                         Ich habe die f&uuml;r mein Land geltenden <a>Nutzungsbestimmungen</a> gelesen und stimme ihnen zu.
                     </label>
@@ -90,11 +90,15 @@
             </form>
         </div>
 
-        <div class="col-3 col-s-12"></div>
     </section>
 
     <footer>
         <span>&copy; 2020 WEVO - Franz Gruber</span>
+        <p>
+            <img style="border:0;width:88px;height:31px"
+                 src="http://jigsaw.w3.org/css-validator/images/vcss"
+                 alt="Valid CSS!" />
+        </p>
     </footer>
     <script src="js/main.js"></script>
 </body>
